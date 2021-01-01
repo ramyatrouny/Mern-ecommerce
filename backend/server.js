@@ -1,6 +1,10 @@
-const express = require('express');
+import express from 'express';
+import dotenv from 'dotenv';
+import products from './data/products.js';
+
+dotenv.config();
+
 const app = express();
-const products = require('./data/products');
 
 app.get('/', (req, res) => {
     res.send('Api is running');
@@ -16,4 +20,5 @@ app.get('/api/products/:id', (req, res) => {
     res.json(product);
 })
 
-app.listen(5000, console.log('Server Running on PORT 5000'));
+app.listen(process.env.PORT,
+    console.log(`Server is running in ${process.env.NODE_ENV} on PORT ${process.env.PORT}`));

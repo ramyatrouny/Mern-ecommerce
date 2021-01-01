@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "RamCom is a mini Ecommerce Monolithic MERN shop currently in development\r I will update the readme whenever I finish the project",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "react-bootstrap": "^1.4.0"
   },
